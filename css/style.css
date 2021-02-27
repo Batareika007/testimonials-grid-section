@@ -1,0 +1,91 @@
+/* ----- Global ----- */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0 auto;
+    background-color: hsl(213, 44%, 95%);
+}
+
+main {
+    margin: 20px auto;
+}
+
+.card {
+    padding-top: 25px;
+    padding-left: 31px;
+    padding-bottom: 30px;
+    padding-right: 37px;
+    border-radius: 7px;
+}
+
+/* --------- card one ---------- */
+.card_one {
+    grid-area: card_one;
+    background-color: hsl(263, 55%, 52%);
+    background-image: url(/images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: top 0 right 80px;
+
+
+}
+
+/* --------  card two ----------- */
+.card_two {
+    grid-area: card_two;
+    background-color: hsl(217, 19%, 35%);
+}
+
+/* --------- card three -------- */
+.card_three {
+    grid-area: card_three;
+    background-color: hsl(0, 0%, 100%);
+}
+
+/* --------- card four -------- */
+.card_four {
+    grid-area: card_four;
+    background-color: hsl(219, 29%, 14%);
+}
+
+
+/* --------- card five -------- */
+.card_five {
+    grid-area: card_five;
+    background-color: hsl(0, 0%, 100%);
+}
+
+/* ------- card header ------ */
+.card_header {
+    display: flex;
+    /* flex-direction: row; */
+}
+
+.card_header>img {
+    width: 30px;
+    border-radius: 28px;
+}
+
+/* ----------- Grid Section -------------- */
+
+.grid-container {
+    height: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 255px 285px 255px 255px;
+    grid-template-rows: 282px 266px;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px;
+    grid-template-areas:
+        "card_one card_one card_two card_five"
+        "card_three card_four card_four card_five"
+    ;
+}
