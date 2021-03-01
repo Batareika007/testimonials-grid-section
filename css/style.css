@@ -27,12 +27,14 @@ main {
     padding-bottom: 30px;
     padding-right: 37px;
     border-radius: 7px;
+    box-shadow: 6.5px 11.5px 10px 2px rgba(0, 0, 0, 0.1);
 }
 
 /* ------- inside cards --------- */
 .card_header {
     display: flex;
     /* flex-direction: row; */
+    margin-bottom: 20px;
 }
 
 .card_header>img {
@@ -41,8 +43,23 @@ main {
     margin-right: 17px;
 }
 
+.person_name {
+    font-weight: 600;
+}
+
+.person_status {
+    opacity: 50%;
+}
+
 .first_section {
     font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.second_section {
+    opacity: 70%;
+    line-height: 136%;
 }
 
 /* --------- card one ---------- */
@@ -52,24 +69,30 @@ main {
     background-image: url(/images/bg-pattern-quotation.svg);
     background-repeat: no-repeat;
     background-position: top 0 right 80px;
+    color: hsl(210, 46%, 95%);
 }
+
+
 
 /* --------  card two ----------- */
 .card_two {
     grid-area: card_two;
     background-color: hsl(217, 19%, 35%);
+    color: hsl(210, 46%, 95%);
 }
 
 /* --------- card three -------- */
 .card_three {
     grid-area: card_three;
     background-color: hsl(0, 0%, 100%);
+    color: hsl(217, 19%, 35%);
 }
 
 /* --------- card four -------- */
 .card_four {
     grid-area: card_four;
     background-color: hsl(219, 29%, 14%);
+    color: hsl(210, 46%, 95%);
 }
 
 
@@ -77,6 +100,7 @@ main {
 .card_five {
     grid-area: card_five;
     background-color: hsl(0, 0%, 100%);
+    color: hsl(217, 19%, 35%);
 }
 
 
@@ -122,10 +146,14 @@ main {
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
+    main {
+        margin: 20px 15.5px;
+    }
+
     .grid-container {
-        grid-template-columns: 327px;
-        grid-template-rows: 444px 240px 222px 387px 438px;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
         grid-template-areas:
             "card_one"
             "card_two"
@@ -138,4 +166,22 @@ main {
 
         background-position: top 0 right 24px;
     }
+}
+
+@media (max-width: 375px) {
+    main {
+        margin: 20px auto;
+    }
+
+    .grid-container {
+        grid-template-columns: 327px;
+        grid-template-rows: 444px 240px 222px 387px 438px;
+        grid-template-areas:
+            "card_one"
+            "card_two"
+            "card_three"
+            "card_four"
+            "card_five";
+    }
+
 }
