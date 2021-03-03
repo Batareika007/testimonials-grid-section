@@ -18,7 +18,7 @@ body {
 }
 
 main {
-    margin: 20px auto;
+    margin: 164px auto;
 }
 
 .card {
@@ -148,11 +148,11 @@ main {
 
 @media (max-width: 600px) {
     main {
-        margin: 20px 15.5px;
+        margin: 71px 15.5px;
     }
 
     .grid-container {
-        width: auto;
+        width: 100%;
         grid-template-columns: auto;
         grid-template-rows: auto;
         grid-template-areas:
@@ -170,18 +170,25 @@ main {
 
 @media (max-width: 375px) {
     main {
-        margin: 20px auto;
+        /* margin: 71px auto; */
+    }
+
+    .card {
+        padding-top: 25px;
+        padding-left: 31px;
+        padding-bottom: 30px;
+        padding-right: 31px;
+    }
+
+    .second_section {
+        line-height: 136%;
+        letter-spacing: 0.01em;
     }
 
     .grid-container {
         grid-template-columns: 327px;
-        grid-template-rows: 444px 240px 222px 387px 438px;
-        grid-template-areas:
-            "card_one"
-            "card_two"
-            "card_three"
-            "card_four"
-            "card_five";
+        /* grid-template-rows: 444px 240px 222px 387px 438px; */
+        ;
     }
 
 }
